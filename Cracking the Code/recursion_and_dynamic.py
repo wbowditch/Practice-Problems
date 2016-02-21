@@ -12,10 +12,10 @@ def child_staircase(n,map):
 	return map[n]
 
 
-#n = 10
-#map = [-1 for x in range(0,n+1)]
+n = 10
+map = [-1 for x in range(0,n+1)]
 
-#print child_staircase(n,map)
+print child_staircase(n,map)
 
 def getSubsets(set,index):
 	#print "to do"
@@ -62,7 +62,7 @@ def all_permutations(str):
 		for j in range(len(word)+1):
 			s = word[:j] + first + word[j:]
 			permutations.append(s)
-	print permutations, str
+	#print permutations, str
 	return permutations
 
 #print all_permutations("testing")

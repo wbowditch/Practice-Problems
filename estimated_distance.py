@@ -12,16 +12,16 @@ def ED(word1,word2):
 
 
 def phrase_count(word1):
-    d ={}
-    the_list = word1.split()
-    for word in the_list:
-        if word not in d:
-            d[word] = 1
+    d ={} # define the dictionary
+    the_list = word1.split()   #create list out of string
+    for word in the_list:  
+        if word not in d:  #if the word isn't already a key
+            d[word] = 1  #set the value of the word to 1
         else:
-            d[word]+=1
+            d[word]+=1  #increment the value of the word(increment the count)
     for key in d:
-        print "Phrase: ",key
-        print "Count: ",d[key]
+        print "Phrase: ",key  #print the key
+        print "Count: ",d[key] #print the key's value
         print
     
         

@@ -1,0 +1,15 @@
+body {background-color: maroon; 
+font-family: helvetica; 
+color: gold;
+}
+  	input, legend {font-size: 150%;}
+  	h1,h4 {color: gold;}
+	select, option {font-size: 150%;}
+	.mybutton {
+		font-size: 150%;
+		background-color: orange;
+	}
+	.mymenu {
+		font-size: 150%;
+		background-color: orange;
+	}

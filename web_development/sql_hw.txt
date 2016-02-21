@@ -1,0 +1,42 @@
+1) SELECT * FROM `countries` WHERE CountryName='Peru'
+
+2) select count(*) from countries where Languages like '%Arabic%'; 
+30 countries have an Arabic dialect spoken as one of the national languages. 
+
+3)select count(*) from countries where Languages like '%Spanish%'; 
+30 countries have a Spanish dialect spoken as on one of the national languages. 
+
+4)  SELECT continent, sum(RoadwaysKm) FROM countries group by continent
+Africa: 2230546
+Arctic Region: 13028
+Asia: 8472793
+Central America and the Caribbean: 251443
+Europe: 5822652
+Middle East: 1068346
+North America:7708783
+Oceania: 943316
+South America: 2574211
+Southeast Asia: 1093548
+
+5)select sum(NaturalGasProductionCubicMeters)*11.06 - sum(NaturalGasConsumptionCubicMeters)*11.06 from countries; 
+62035982400 KWh
+
+6)SELECT CountryName FROM countries WHERE Imports-Exports>0 and !isnull(exports) order by Imports-Exports ASC LIMIT 5;
+Tokelau, Turks and Caicos Islands, Tuvalu, Niue, Montserrat
+
+7) SELECT CountryName, DebtExternal FROM countries Imports-Exports>0 and !isnull(exports) order by DebtExternal ASC LIMIT 5,3;
+Nauru, Saint Helena,Sao Tome Principe
+
+8)select CountryName, MedianAge from countries where MedianAge in (select max(MedianAge) from countries);
+Monaco: 45.4 years
+
+9)select CountryName, Population* POW((1 + PopulationGrowthRate/100),33) 
+from countries where Population* POW((1 + PopulationGrowthRate/100),33) in 
+(select max(Population* POW((1 + PopulationGrowthRate/100),33)) from countries;
+India
+
+10) select sum(oilprovedreservesbbl) from countries;
+1328374753000 barrels 
+
+11) select sum(oilprovedreservesbbl)/(sum(oilconsumptionbblperday)*365) from countries;
+44.3 years from 2015 until oil reserves run out.

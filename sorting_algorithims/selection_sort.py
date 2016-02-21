@@ -16,8 +16,8 @@
 ##advantages over more complicated algorithms in certain situations,
 ##particularly where auxiliary memory is limited.
 
-import sys def
-selection_sort(L):
+import sys
+def selection_sort(L):
     new_L = []
     while(L):
         min_x = 99999
