@@ -1,4 +1,3 @@
-#VICTOR DULOUT
 
 print 'Try to guess the word I m thinking of.'
 print 'If the word you guess comes after my word'
@@ -22,4 +21,3 @@ if guess == theanswer:
 if count == 21:
     print 'You had your 20 guesses, you lost'
 
-print 'VICTOR DULOUT'
